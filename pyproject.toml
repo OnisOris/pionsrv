@@ -10,7 +10,8 @@ maintainers = [
     {name = "Michael", email = "onisoris@yandex.ru"}
 ]
 dependencies = [
-    "pion @ git+https://github.com/OnisOris/pion@dev",
+    "pionsdk @ git+https://github.com/OnisOris/pion@dev",
+    "matplotlib",
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -29,7 +30,7 @@ Homepage = "https://github.com/OnisOris/pionsrv"
 Documentation = "https://onisoris.github.io/pionsrv"
 Repository = "https://github.com/OnisOris/pionsrv.git"
 Issues = "https://github.com/OnisOris/pionsrv/issues"
-pion = "https://github.com/OnisOris/pion"
+pionsrv = "https://github.com/OnisOris/pionsrv"
 
 [project.scripts]
 start_control_server = "pionsrv.main:main"
