@@ -33,5 +33,5 @@ Issues = "https://github.com/OnisOris/pionsrv/issues"
 pionsrv = "https://github.com/OnisOris/pionsrv"
 
 [project.scripts]
-start_control_server = "pionsrv.main:main"
+start_control_server = "pionsrv.control_server:main"
 
