@@ -1,0 +1,4 @@
+8000 arm
+all takeoff
+sleep 5
+8000 goto 1 1 1 1
