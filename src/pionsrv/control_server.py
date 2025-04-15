@@ -94,13 +94,19 @@ class ControlServer:
                 except ValueError:
                     print("Неверное значение задержки.")
             return
-
-        if parts[0].lower() == "script":
+        elif parts[0].lower() == "script":
             if len(parts) != 2:
                 print("Использование: script <имя_файла>")
             else:
                 self.run_script(parts[1])
             return
+        elif parts[0].lower()  == "updategroups":
+            # Загрузка конфигурации и обновление группы для каждого дрона
+            self.drone_config = load_drone_config(self.path_to_config)
+            for drone_id, group in self.drone_config.items():
+                self.send_command(CMD.SET_GROUP, [group], target=drone_id)
+                print(f"Отправлена команда для дрона {drone_id}: установка группы {group}")
+
         target_token = parts[0]
         if target_token.lower() == "all":
             target = "<broadcast>"
